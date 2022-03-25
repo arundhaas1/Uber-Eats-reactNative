@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Image } from "react-native";
 
-export default function SearchBar() {
+export default function SearchBar({ setCities }) {
   const [input, setInput] = useState("");
   return (
     <View style={{ marginTop: 15, flexDirection: "row" }}>
@@ -19,10 +19,12 @@ export default function SearchBar() {
         <TextInput
           name="Keyword"
           placeholder="Search"
-          onChange={(e) => setInput(e.target.value)}
+          onChangeText={(e) => setInput(e)}
+          onSubmitEditing={() => setCities(input)}
         />
 
         <Image
+          // onPress={()=>console.log(input)}
           source={require("../../assets/icons/search.png")}
           style={{
             justifyContent: "center",

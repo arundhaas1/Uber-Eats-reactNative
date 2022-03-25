@@ -7,8 +7,8 @@ export default function BottomTabs() {
     <View
       style={{
         flexDirection: "row",
-        margin: 10,
-        marginHorizontal: 30,
+        marginTop:10,
+        marginHorizontal:10,
         justifyContent: "space-between",
       }}
     >
@@ -22,7 +22,7 @@ export default function BottomTabs() {
 }
 
 const Icon = (props) => (
-  <TouchableOpacity>
+  <TouchableOpacity >
     <View>
       <FontAwesome5
         name={props.icon}

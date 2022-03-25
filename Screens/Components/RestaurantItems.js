@@ -72,8 +72,8 @@ export const localRestaurants = [
 
 export default function RestaurantItems(props) {
   return (
-    <ScrollView activeOpacity={false} style={{ marginBottom: 180 }}>
-      <SafeAreaView>
+    // <ScrollView activeOpacity={false} style={{ marginBottom: 220 }}>
+      <SafeAreaView style={{ marginBottom: 220 }} >
         {props.restaurantData.map((restaurant, index) => {
           return (
             <View
@@ -89,13 +89,14 @@ export default function RestaurantItems(props) {
           );
         })}
       </SafeAreaView>
-    </ScrollView>
+    // </ScrollView>
   );
 }
 
 const RestaurantImage = (props) => (
   <>
     <Image
+    // onPress={}
       source={{
         uri: props.image,
       }}

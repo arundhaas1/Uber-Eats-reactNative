@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React, { useState } from "react";
 import { TouchableOpacity } from "react-native";
 
-export default function Header() {
+export default function Header({ settab }) {
   const [activeTab, setActivetab] = useState("Delivery");
+
   return (
     <View
       style={{ flexDirection: "row", justifyContent: "center", marginTop: 23 }}
@@ -22,6 +23,21 @@ export default function Header() {
         activeTab={activeTab}
         setActivetab={setActivetab}
       />
+      <TouchableOpacity
+        style={{ marginLeft: "auto", marginRight: 10 }}
+        onPress={() => settab()}
+      >
+        <Image
+          source={require("../../assets/icons/menu.png")}
+          style={{
+            height: 25,
+            width: 25,
+            justifyContent: "flex-end",
+            alignItems: "center",
+            right: 0,
+          }}
+        />
+      </TouchableOpacity>
     </View>
   );
 }
