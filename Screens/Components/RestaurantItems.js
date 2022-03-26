@@ -1,8 +1,6 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView ,TouchableOpacity,SafeAreaView  } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { SafeAreaView } from "react-native";
 
 export const localRestaurants = [
   {
@@ -73,7 +71,7 @@ export const localRestaurants = [
 export default function RestaurantItems(props) {
   return (
     <ScrollView activeOpacity={false} style={{ marginBottom: 220 }}>
-      <SafeAreaView style={{ marginBottom: 220 }} >
+      <SafeAreaView style={{ marginBottom: 220 }}>
         {props.restaurantData.map((restaurant, index) => {
           return (
             <View
@@ -89,14 +87,13 @@ export default function RestaurantItems(props) {
           );
         })}
       </SafeAreaView>
-    // </ScrollView>
+    </ScrollView>
   );
 }
 
 const RestaurantImage = (props) => (
   <>
     <Image
-    // onPress={}
       source={{
         uri: props.image,
       }}

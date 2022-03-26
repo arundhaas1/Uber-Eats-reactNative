@@ -1,6 +1,5 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image,ScrollView  } from "react-native";
 import React from "react";
-import { ScrollView } from "react-native";
 import { Divider } from "react-native-elements";
 
 const foods = [
@@ -41,6 +40,7 @@ const foods = [
     image:
       "https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
   },
+  
 ];
 
 export default function MenuItems() {

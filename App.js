@@ -1,6 +1,9 @@
 import * as React from "react";
 import RootNavigation from "./Screens/Navigation";
+import 'react-native-gesture-handler';
 
-export default function App() {
+function App() {
   return <RootNavigation />;
 }
+
+export default App;
