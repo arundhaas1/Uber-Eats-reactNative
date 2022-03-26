@@ -1,11 +1,6 @@
-import { View} from "react-native";
-import Home from "./Screens/Home";
-import RestaurantDetail from "./Screens/RestaurantDetail";
+import * as React from "react";
+import RootNavigation from "./Screens/Navigation";
 
 export default function App() {
-  return (
-    <View style={{backgroundColor:"#eee",flex:1}}>
-      <RestaurantDetail />
-    </View>
-  );
+  return <RootNavigation />;
 }

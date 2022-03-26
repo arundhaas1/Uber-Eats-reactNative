@@ -72,7 +72,7 @@ export const localRestaurants = [
 
 export default function RestaurantItems(props) {
   return (
-    // <ScrollView activeOpacity={false} style={{ marginBottom: 220 }}>
+    <ScrollView activeOpacity={false} style={{ marginBottom: 220 }}>
       <SafeAreaView style={{ marginBottom: 220 }} >
         {props.restaurantData.map((restaurant, index) => {
           return (

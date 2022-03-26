@@ -43,15 +43,29 @@ const foods = [
     image:
       "https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
   },
+  {
+    title: "Lasagna",
+    description: "With butter lettuce, tomato and sauce bechamel",
+    price: "$13.50",
+    image:
+      "https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
+  },
+  {
+    title: "Lasagna",
+    description: "With butter lettuce, tomato and sauce bechamel",
+    price: "$13.50",
+    image:
+      "https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
+  },
 ];
 
-export default function RestaurantDetail({ route, navigation }) {
+export default function RestaurantDetail() {
   return (
     <View>
-      <About route={route} />
+      <About />
       <Divider width={1.8} style={{ marginVertical: 20 }} />
-      <ScrollView>
-        <MenuItems />
+      <ScrollView style={{ marginBottom: "auto" }}>
+        <MenuItems style={{ marginRight: 10 }} />
       </ScrollView>
       {/* <ViewCart navigation={navigation} /> */}
     </View>
