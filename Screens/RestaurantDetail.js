@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { Divider } from "react-native-elements";
+import { ScrollView } from "react-native";
 import About from "./Components/RestaurantDetails/About";
 import MenuItems from "./Components/RestaurantDetails/MenuItems";
-
 
 const foods = [
   {
@@ -50,7 +50,9 @@ export default function RestaurantDetail({ route, navigation }) {
     <View>
       <About route={route} />
       <Divider width={1.8} style={{ marginVertical: 20 }} />
-      <MenuItems  />
+      <ScrollView>
+        <MenuItems />
+      </ScrollView>
       {/* <ViewCart navigation={navigation} /> */}
     </View>
   );
